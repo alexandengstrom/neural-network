@@ -1,8 +1,0 @@
-import data
-from neuralnetwork.neuralnetwork import NeuralNetwork
-
-nn = NeuralNetwork(inputs=6, eta=0.05, momentum=0.9)
-nn.add_relu_layer(16)
-nn.add_relu_layer(8)
-nn.add_sigmoid_layer(1)
-nn.train(data.gates_data, data.gates_targets, 3000, 1)
