@@ -24,8 +24,7 @@ class NeuralNetwork:
                 result = self.feedforward(data)
                 
                 error = self.mean_squared_error(result, target)
-                gradient = self.mean_squared_error_prime(result, target)
-                
+                gradient = self.mean_squared_error_prime(result, target)             
 
                 self.backward(gradient)
 
@@ -82,6 +81,5 @@ class NeuralNetwork:
                 row.append(2 * (targets[i][j] - results[i][j]) / size)
 
             result.append(row)
-
 
         return result

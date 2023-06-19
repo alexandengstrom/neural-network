@@ -15,7 +15,6 @@ class Layer:
 
         self.delta_weights = [[0] * inputs for i in range(outputs)]
 
-
     def init_biases(self, outputs):
         self.biases = [[random.uniform(-0.1, 0.1)] for _ in range(outputs)]
 
@@ -28,7 +27,6 @@ class Layer:
                 activations.append([self.activation(self.pre_activation[i][j])])
 
         return activations
-
 
     def dense_forward(self, inputs):
         self.input_data = inputs
